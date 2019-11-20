@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+    <title>New York Times Search API</title>
+</head>
+
+<header>
+    <div class="jumbotron bg-dark text-white">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-laptop"></i>
+            <b>New York Times Search</b>
+        </h1>
+    </div>
+</header>
+
+<body>
+    <!-- search parameters container -->
+    <div>
+
+        <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+
+
+            <div class="card-header"><i class="fab fa-searchengin"></i> Search Parameters</div>
+            <div class="card-body text-dark bg-light">
+
+
+                <form class="needs-validation" >
+                    <div class="form-group">
+                        <label>Search Term:</label><br>
+                        <input style="width:100%" type="text" id="search-input" class="form-control" placeholder="eg. Natalie Portman"
+                            required>
+                         <br>
+
+
+                        <label for="records">Number of Records to Retrieve:</label><br>
+                        <select style="width:100%" id='record-input' name="year" required>
+                            <option value="1">1</option>
+                            <option value="5" selected="selected">5</option>
+                            <option value="10">10</option>
+                        </select><br>
+
+
+                        <label for="searchTerm">Start Year (Optional):</label><br>
+                        <input style="width:100%" type="text" id="startYear-input" placeholder="eg. 1989"><br>
+
+                        <label for="searchTerm">End Year (Optional):</label><br>
+                        <input style="width:100%" type="text" id="endYear-input" placeholder="eg. 2019"><br><br><br>
+
+                        <input class='btn btn-dark' id="search-submit" type="submit" value="Submit">
+                        <input class='btn btn-dark' id="clear" type="submit" value="Clear Results">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card text-dark bg-light mb-3" style="max-width: 100%;">
+        <div class="card-header text-light bg-dark"><i class="far fa-newspaper"></i>
+            Search Results</div>
+        <div class="card-body text-dark bg-light" id='searchResults'>
+
+            <!-- <div class="border border-secondary" id='searchResults' class="flex-container"> -->
+            <!-- <p style="background-color:#20315A" class='text-lg-justify text-light font-weight-bold'>Top Articles </p> -->
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+
+</html>
